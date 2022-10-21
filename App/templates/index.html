@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+            <meta charset="utf-8">
+            <title></title>
+        
+            <script type="text/javascript">
+                    
+            function calcular(){
+                var arr_edad = [58,44,33,59,34];
+                var arr_empleo = ['management','technician','entrepreneur'];
+                var arr_estado_civil = ['divorced','single','married'];
+                var arr_educacion = ['unknown','primary','tertiary','secondary'];
+                var arr_deuda = ['no','yes'];
+                var arr_balance = [2143	,29, 1506, 1475];
+                var arr_casa = ['no','yes'];
+                var arr_personal = ['no','yes'];
+                var arr_contacto = ['telephone','unknown','cellular'];
+                var arr_dia = [5, 16, 17];
+                var arr_campania = [1, 2, 3,4, 5]
+                var arr_mes = ['aug','jul','may'];
+                var arr_putcome = ['other','failure','unknown'];
+
+                
+                var edad = arr_edad[Math.floor(Math.random()*arr_edad.length)];
+                var empleo = arr_empleo[Math.floor(Math.random()*arr_empleo.length)];
+                var estado_civil = arr_estado_civil[Math.floor(Math.random()*arr_estado_civil.length)];
+                var educacion = arr_educacion[Math.floor(Math.random()*arr_educacion.length)];
+                var deuda = arr_deuda[Math.floor(Math.random()*arr_deuda.length)];
+                var balance = arr_balance[Math.floor(Math.random()*arr_balance.length)];
+                var casa = arr_casa[Math.floor(Math.random()*arr_casa.length)];
+                var personal = arr_personal[Math.floor(Math.random()*arr_personal.length)];
+                var contacto = arr_contacto[Math.floor(Math.random()*arr_contacto.length)];
+                var dia = arr_dia[Math.floor(Math.random()*arr_dia.length)];
+                var mes = arr_mes[Math.floor(Math.random()*arr_mes.length)];
+                var duracion = Math.floor(Math.random() * (3000 - 0 + 1) +  0 );
+                var campania = arr_campania[Math.floor(Math.random()*arr_campania.length)];
+                var pdia = Math.floor(Math.random() * (2 - -1 + 1) +  -1 );
+                var previo = 0;
+                var putcome = arr_putcome[Math.floor(Math.random()*arr_putcome.length)];
+
+                // var arr_edad = [58,44,33,59,34];
+                // var arr_empleo = ['management','technician','entrepreneur'];
+                // var arr_estado_civil = ['divorced','single','married'];
+                // var arr_educacion = ['unknown','primary','tertiary','secondary'];
+                // var arr_deuda = ['no','yes'];
+                // var arr_balance = [2143	,29, 1506, 1475];
+                // var arr_casa = ['no','yes'];
+                // var arr_personal = ['no','yes'];
+                // var arr_contacto = ['telephone','unknown','cellular'];
+                // var arr_dia = [5, 16, 17];
+                // var arr_campania = [1, 2, 3,4, 5]
+                // var arr_mes = ['aug','jul','may'];
+                // var arr_putcome = ['other','failure','unknown'];
+
+                
+                // var edad = arr_edad[Math.floor(Math.random()*arr_edad.length)];
+                // var empleo = arr_empleo[Math.floor(Math.random()*arr_empleo.length)];
+                // var estado_civil = arr_estado_civil[Math.floor(Math.random()*arr_estado_civil.length)];
+                // var educacion = arr_educacion[Math.floor(Math.random()*arr_educacion.length)];
+                // var deuda = arr_deuda[Math.floor(Math.random()*arr_deuda.length)];
+                // var balance = arr_balance[Math.floor(Math.random()*arr_balance.length)];
+                // var casa = arr_casa[Math.floor(Math.random()*arr_casa.length)];
+                // var personal = arr_personal[Math.floor(Math.random()*arr_personal.length)];
+                // var contacto = arr_contacto[Math.floor(Math.random()*arr_contacto.length)];
+                // var dia = arr_dia[Math.floor(Math.random()*arr_dia.length)];
+                // var mes = arr_mes[Math.floor(Math.random()*arr_mes.length)];
+                // var duracion = Math.floor(Math.random() * (3000 - 0 + 1) +  0 );
+                // var campania = arr_campania[Math.floor(Math.random()*arr_campania.length)];
+                // var pdia = Math.floor(Math.random() * (2 - -1 + 1) +  -1 );
+                // var previo = Math.floor(Math.random() * (200 - 0 + 1) +  0 );
+                // var putcome = arr_putcome[Math.floor(Math.random()*arr_putcome.length)];
+                var sep = ",";
+                var sep_c = "','";
+                var sep_c_f = "',";
+                // document.getElementById("demo").innerHTML = "'"+edad +                                                             
+                //                                             sep_c + empleo +
+                //                                             sep_c + estado_civil+
+                //                                             sep_c + educacion +
+                //                                             sep_c + deuda+
+                //                                             sep_c + balance+
+                //                                             sep_c + casa+
+                //                                             sep_c + personal+
+                //                                             sep_c + contacto+
+                //                                             sep_c + dia+
+                //                                             sep_c + mes+
+                //                                             sep_c + duracion+
+                //                                             sep_c + campania+
+                //                                             sep_c + -1+
+                //                                             sep_c + previo+
+                //                                             sep_c + putcome + "'";
+
+                document.getElementById("age").value = edad;
+                document.getElementById("job").value = empleo;
+                document.getElementById("marital").value = estado_civil;
+                document.getElementById("education").value = educacion;
+                document.getElementById("default").value = deuda;
+                document.getElementById("balance").value = balance;
+                document.getElementById("housing").value = casa;
+                document.getElementById("loan").value = personal;
+                document.getElementById("contact").value = contacto;
+                document.getElementById("day").value = dia;
+                document.getElementById("month").value = mes;
+                document.getElementById("duration").value = duracion;
+                document.getElementById("campaign").value = campania;
+                document.getElementById("pdays").value = -1;
+                document.getElementById("previous").value = previo;
+                document.getElementById("poutcome").value = putcome;
+            }
+
+            </script>
+            <style>
+
+              .body {
+                font-family: Arial, Helvetica, sans-serif;
+                padding-left: 50px;
+              }
+        
+              /* .header {
+                  font-size: 20px;
+              } */
+        
+               nav {
+                float: left;
+                width: 200px;
+                height: 250px;
+                /* background: #eeeeee; */
+                font-family: Arial, Helvetica, sans-serif;
+                padding: 20px;
+              } 
+        
+             div {
+                  padding-left: 20px;
+                  font-family: Arial, Helvetica, sans-serif;
+              }
+        
+              .seltext {
+                  font-size: 20px;
+              } 
+        
+              /* .resulttext {
+                  font-weight: bold;
+                  font-size: 80px;
+                  color: #807F7F;
+              } */
+
+
+
+        
+            </style>
+    </head>
+    <body>
+        
+
+            <div id='resultado'>
+            <h2>
+                <p class="">¿El cliente tomaría el depósito?: <h1>{{ result }}</h1></p>
+                <p class=""> </p>
+            </h2>
+            </div>
+                <nav>
+            <form id='myDialog' method="POST" action="/">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="fname">Age:</label>
+                            <input type="text" id="age" name="age"><br><br>
+                        </td>
+                        <td>
+                            <label for="fname">Job:</label>
+                            <input type="text" id="job" name="job"><br><br>
+                        </td>
+                        <td>
+                            <label for="fname">Marital:</label>
+                            <input type="text" id="marital" name="marital"><br><br>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label for="fname">Education:</label>
+                            <input type="text" id="education" name="education"><br><br>
+                        </td>
+                        <td>
+                            <label for="fname">Default:</label>
+                            <input type="text" id="default" name="default"><br><br>
+                        </td>
+                        <td>
+                            <label for="fname">Balance:</label>
+                            <input type="text" id="balance" name="balance"><br><br>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td>
+                            <label for="fname">Housing:</label>
+                            <input type="text" id="housing" name="housing"><br><br>
+                        </td>
+                        <td>
+                            <label for="fname">Loan:</label>
+                            <input type="text" id="loan" name="loan"><br><br>
+                        </td>
+                        <td>
+                            <label for="fname">Contact:</label>
+                            <input type="text" id="contact" name="contact"><br><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="fname">Day:</label>
+                            <input type="text" id="day" name="day"><br><br>
+                        </td>
+                        <td>
+                            <label for="fname">Month:</label>
+                            <input type="text" id="month" name="month"><br><br>
+                        </td>
+                        <td>
+                            <label for="fname">Duration:</label>
+                            <input type="text" id="duration" name="duration"><br><br>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <label for="fname">Campaign:</label>
+                            <input type="text" id="campaign" name="campaign"><br><br>
+                        </td>
+                        <td>
+                            <label for="fname">Pdays:</label>
+                            <input type="text" id="pdays" name="pdays"><br><br>
+                        </td>
+                        <td>
+                            <label for="fname">Previous:</label>
+                            <input type="text" id="previous" name="previous"><br><br>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <label for="fname">Poutcome:</label>
+                            <input type="text" id="poutcome" name="poutcome"><br><br>
+                        </td>
+                        <td>
+                         <input type="submit" value="Validar">
+                        
+                        </td>
+                    </tr>               
+            </table>
+            </form>
+            <input type="submit" value="Random" onclick="calcular()">
+            <p id="demo"></p>
+        </nav>
+
+        
+
+    </body>
+</html>
+
+
+
+
